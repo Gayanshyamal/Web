@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+   <link rel="stylesheet" href="HC.css">
+   <link rel="shortcut icon" type="x-icon" href="Picsart_25-07-09_11-29-44-084.png">
+</head>
+<body>
+    <div class="BGimage"></div>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div><img src="Picsart_25-07-09_11-29-44-084.png" class="Logo"></div>
+                <a href="Home.html" class="navbar-logo">Student Web Portal</a>
+                <button class="navbar-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="navbar-menu">
+                    <li><a href="Home.html" >Home</a></li>
+                    <li><a href="Aboutus.html">About us</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Setting.html"class="active">Setting</a></li>
+                    <li>
+                        <button class="btnLogin-popup" onclick="login()" id="loginBtn">Login</button>
+                    </li>
+                </ul>
+         </div>
+        </nav>
+        <script src="Hscript.js" defer></script>
+        <script>
+
+            //login button action
+
+            document.getElementById("loginBtn").addEventListener("click",
+            function()
+            {
+                window.location.href = "Signup.html";
+            });
+        </script>
+
+</body>

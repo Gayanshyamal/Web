@@ -1,0 +1,99 @@
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 100px;
+    margin-left: 150px;
+    margin-right:150px ;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    position: relative;
+}
+
+section .Me
+{
+    position: absolute;
+    width:25%;
+    height: 40%;
+    left:37%;
+    top:20px;
+    animation: zoomIn 2s ease-in-out forwards;
+}
+
+section p
+{
+    color: rgb(210, 212, 171);
+    font-size: 20px;
+    line-height: 2;
+    position: absolute;
+    text-align:center;
+    top: 45%;
+    animation: zoomIn 2s ease-in-out forwards;
+}
+
+section .sig .MS
+{
+    position:absolute;
+    text-align: justify;
+    top:85%;
+    left: 10px;
+    line-height: 25px;
+    color: aliceblue;
+    animation: zoomIn 2s ease-in-out forwards;
+}
+
+section .sig .s
+{
+    position:absolute;
+    left:10px ;
+    width:130px;
+    bottom: 100px;
+}
+
+@media(max-width:1024px)
+{
+    section .Me
+    {
+      width:30%; 
+      height: 30%; 
+    }
+    section p
+    {
+        top:35%;
+        font-size:16px ;
+    }
+    section .sig .MS
+    {
+        top:87%;
+    }
+
+    section .sig .s
+    {
+        width: 100px;
+        bottom: 80px;
+    }
+}
+@media(max-width:750px)
+{
+    section .Me
+    {
+        height: 20%;
+    }
+
+    section p
+    {
+        top:25%;
+        font-size: 14px;
+    }
+
+    section .sig .MS
+    {
+        font-size: 12px; 
+        line-height: 15px; 
+        top: 90%;   
+    }   
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="Contact.css?v=2">
+    <link rel="stylesheet" href="HC.css?v=1">
+    <link rel="shortcut icon" type="x-icon" href="Picsart_25-07-09_11-29-44-084.png">
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+</head>
+<body>
+    <div class="BGimage"></div>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div><img src="Picsart_25-07-09_11-29-44-084.png" class="Logo"></div>
+                <a href="index.html" class="navbar-logo">Student Web Portal</a>
+                <button class="navbar-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="navbar-menu">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="Aboutus.html">About us</a></li>
+                    <li><a href="Contact.html"class="active">Contact</a></li>
+                    <li>
+                        <button class="btnLogin-popup" onclick="login()" id="loginBtn">Login</button>
+                    </li>
+                </ul>
+         </div>
+        </nav>
+        <form id="register-form" onsubmit="validateContact(event)">
+            <div class="container">
+                <div class="contactInfo">
+                    <div>
+                        <h2>Contact Info</h2>
+                        <ul class="info">
+                            <li>
+                                <span><img src="location.png"></span>
+                                <span>Haliela,Badulla</span>
+                            </li>
+                            <li>
+                                <span><img src="mail.png"></span>
+                                <span>prabashibandara81@gmail.com</span>
+                            </li>
+                            <li>
+                                <span><img src="call.png"></span>
+                                <span>+94-781634227</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="sci">
+                        <li><a href="https://www.facebook.com/share/16swHhHAPw/"><img src="1.png"></a></li>
+                        <li><a href="#"><img src="2.png"></a></li>
+                        <li><a href="https://www.instagram.com/prabhashi_bandara?igsh=MTNsNGlhMjhybWEyNQ%3D%3D&utm_source=qr"><img src="3.png"></a></li>
+                        <li><a href="https://pin.it/2PIqqijuH"><img src="4.png"></a></li>
+                        <li><a href="https://www.linkedin.com/in/prabashi-bandara-81b9b5373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img src="5.png"></a></li>
+                    </ul>
+                </div>
+                <div class="contactForm">
+                    <h2>Send a Massage</h2>
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <input type="text" id="con-firstname" required>
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" id="con-lastname" required>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="email" id="con-email" required >
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" id="con-no" required>
+                            <span>Mobile Number</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea id="con-msg" required></textarea>
+                            <span>Write your massage here.....</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <script src="Hscript.js" defer></script>
+        <script>
+            //login button action
+
+            document.getElementById("loginBtn").addEventListener("click",
+            function()
+            {
+                window.location.href = "SignUp.php";
+            });
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>

@@ -1,0 +1,588 @@
+
+body
+{
+    margin: 0;
+    padding: 0;
+    
+}
+/*background image */
+.BGimage
+{
+    background-image: url('./Background-image.jpg');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    z-index: -10;
+    overflow: auto;
+}
+
+@media(max-width:650)
+{
+    .BGimage
+    {
+       display: none;
+    }
+}
+
+.Logo 
+{
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+    display: flex;
+}
+
+.welcome
+{
+    display: flex;
+    padding: 0;
+    border: 0;
+    height: 150px;
+    padding-left: 10px;
+    margin-top: 150px;
+;
+}
+svg path
+{
+    fill: transparent;
+    stroke:rgb(220, 201, 201);
+    stroke-width: 5;
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    animation:  textAnimation 2s ease-in-out forwards;
+}
+
+@keyframes textAnimation 
+{
+    0%{
+        stroke-dashoffset:3000;
+    }
+
+    45%{
+        fill: transparent;
+    }
+    
+    100%{
+        fill:aliceblue;
+        stroke-dashoffset: 0;
+    }
+}
+/* Home page paragraph*/
+.PH
+{
+    color: rgb(210, 212, 171);
+    font-size: 20px;
+    height: 100ph;
+    line-height: 2;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    animation: zoomIn 4s ease-in-out forwards;
+}
+
+@keyframes zoomIn
+{
+    0%
+    {
+        transform: scale(1);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Navigation Bar settings */
+.navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    position:sticky;
+    top: 0;
+    background:transparent;
+    box-shadow: 0 10px 20px rgb(56, 55, 55);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+}
+
+.navbar-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 1600px;
+}
+
+.navbar-logo
+{
+    font-size: 2rem;
+    font-weight: 600;
+    color: aliceblue;
+    text-decoration:none;
+    cursor: pointer;
+    margin-right: 400px;
+}
+
+.navbar-container .navbar-menu
+{
+    display: flex;
+    text-align: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar-container .navbar-menu li a
+{
+    text-decoration: none;
+    color: rgb(252, 252, 251);
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.navbar-container .navbar-menu li a:hover,
+.navbar-container .navbar-menu li a.active
+{
+    color: rgb(2, 2, 2);
+    background: rgba(188,212,229,0.8);
+    border: 2px solid aliceblue;
+}
+
+.navbar-toggle
+{
+    display: none;
+    background:transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar 
+{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background:#fff;
+    transition: all 0.3s ease-in-out;
+}
+
+@media ( max-width:880px)
+{
+    .navbar{ backdrop-filter: none; }
+
+    .navbar-container .navbar-menu
+    {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: 0;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-container .navbar-menu.active
+    {
+        display: flex;
+        z-index: 0;
+    }
+
+    .navbar-toggle
+    {
+        display: block;
+        z-index: 1000;
+    }
+
+    .navbar-toggle.active .bar:nth-child(2){opacity: 0;}
+
+    .navbar-toggle.active .bar:nth-child(1)
+    {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar-toggle.active .bar:nth-child(3)
+    {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+@media (max-width:480px)
+{
+    .navbar-container{padding: 0 1rem;}
+
+    .navbar-logo{font-size: 1.7rem;}
+
+    .navbar-container .navbar-menu li a
+    {
+        font-size: 1.2rem;
+        padding: 3px 15px;
+    }
+}
+
+/* Login page design */
+.wrapper
+{  
+    margin-left: 500px;
+    position:sticky;
+    width: 480px;
+    height:400px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    display: flex;
+    padding-left: 45px;
+    padding-right: 45px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    margin-top: 30px;
+    transform: scale(0);
+    transition: transform .15s ease, height .2s ease;
+}
+
+.wrapper.active-popup
+{
+   transform: scale(1); 
+}
+
+.navbar .btnLogin-popup
+{
+    width: 100px;
+    height: 25px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: .5s;
+}
+
+.navbar .btnLogin-popup:hover
+{
+    background: aliceblue;
+    color: #162938;
+}
+
+.wrapper.active 
+{
+    height: 650px;
+}
+
+.wrapper .icon-close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 99;
+}
+.wrapper .form-box
+{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login
+{
+    transition: transform .18s ease;
+    transform:translateX(0);
+}
+
+.wrapper.active .form-box.login
+{
+    transition: none;
+    transform: translateX(-550px);
+}
+
+.wrapper .form-box.Register
+{
+    position:absolute;
+    transition: none;
+    transform: translateX(600px);
+}
+
+.wrapper.active .form-box.Register
+{
+    transition: transform .18s ease;
+    transform:translateX(0);
+}
+
+.form-box h2
+{
+    font-size: 3em;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.input-box
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+    
+}
+
+
+.input-box input:-webkit-autofill,
+.input-box input:-webkit-autofill:hover,
+.input-box input:-webkit-autofill:focus,
+.input-box input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px transparent inset(1) !important;
+    background: transparent !important;
+    backdrop-filter: blur(10px)!important;
+}
+
+
+.BD 
+{
+  position: relative;
+  margin-top: 20px;
+}
+
+.BD input[type="date"] {
+  width: 100%;
+  padding: 12px 0px 12px 0;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #162938;
+  background: transparent;
+  outline: none;
+}
+
+.BD label {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-size: 16px;
+  color: aliceblue;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.BD input[type="date"]:focus + label,
+.BD input[type="date"]:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 15px;
+  color: aliceblue;
+}
+
+input[type="date"]
+{
+    color:aliceblue;
+}
+.BD input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 14px;
+  size: 20px;
+  z-index: 2
+}
+.BD::after {
+  content: "\1F4C5"; 
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; 
+  color: rgb(255, 72, 0); 
+  font-size: 20px;
+}
+
+.input-box label
+{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+
+
+.input-box input:focus~label,
+.input-box input:valid~label
+{
+    
+    top: 5px;
+}
+
+
+
+.input-box input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:white;
+    font-weight: 100;
+    padding: 0 35px 0 5px;
+}
+
+.input-box img
+{
+    position: absolute;
+    top:20px;
+    right: 40px;
+    font-size: 0.5em;
+    color: white;
+    line-height: 57px;
+    width: 20px;
+    cursor: pointer;
+
+}
+
+.input-box .icon
+{
+    position: absolute;
+    right: 12px;
+    font-size: 1.2em;
+    color: white;
+    line-height: 57px;
+}
+
+.remember-forget
+{
+    font-size: 1em;
+    color:white;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forget label input
+{
+    accent-color:white;
+}
+
+.remember-forget a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.remember-forget a:hover
+{
+    text-decoration: underline;
+}
+
+.btn
+{
+    width: 100%;
+    height: 40px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btnr
+{
+    width: 22%;
+    height: 30px;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 155px;
+    margin-top: 15px;
+    transition: .5s;
+}
+
+.wrapper .form-box.login .btnr:hover
+{
+    background: aliceblue;
+    color: #162938;
+}
+
+.login-register
+{
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin: 10px 0 10px;
+    overflow: auto;
+}
+
+.login-register p a 
+{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover
+{
+    text-decoration: underline;
+}
+
+.form-box.Register 
+{
+    
+    position: relative;
+    width: 400px;
+    height: 400px;
+    top: 0;
+    padding-top: 0px;
+}
+
+

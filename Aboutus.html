@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+      <link rel="stylesheet" href="HC.css">
+      <link rel="stylesheet" href="Aboutcss.css">
+      <link rel="shortcut icon" type="x-icon" href="Picsart_25-07-09_11-29-44-084.png">
+      <meta name="viewport" content="width=device-with, initial-scale=1.0">
+</head>
+<body>
+    <div class="BGimage">
+        <nav class="navbar">
+            <div class="navbar-container">
+               <div><img src="Picsart_25-07-09_11-29-44-084.png" class="Logo"></div>
+               <a href="index.html" class="navbar-logo">Student Web Portal</a>
+               <button class="navbar-toggle">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+               </button>
+               <ul class="navbar-menu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="Aboutus.html" class="active">About us</a></li>
+                  <li><a href="Contact.html">Contact</a></li>
+                  <li>
+                  <button class="btnLogin-popup" onclick="login()" id="loginBtn">Login</button>
+                  </li>  
+               </ul>
+            </div>
+         </nav>  
+         <section>   
+               <img class="Me" src="Me.png">
+               <p>This web application was developed as part of a web development assignment to demonstrate the integration of front-end and back-end technologies. The system allows users to register, log in, and securely access their profile and a contact form. It includes client-side validation using JavaScript and handles data processing and session management with PHP. The design is fully responsive and user-friendly, built using semantic HTML5 and styled with modern CSS techniques like Flexbox and Grid. This project showcases core concepts in web development including form handling, user authentication, data storage, and protected routes.</p>
+            <div class="sig">
+               <img class="s" src="Signatire.png">
+               <p class="MS">
+                  Ms.Prabhashi Dilshani<br>
+                  Diploma in information Technology<br>
+                  SITC Campus
+               </p>
+            </div>
+         </section> 
+      </div>
+    <script>
+
+      //login button action
+
+      document.getElementById("loginBtn").addEventListener("click",
+      function()
+      {
+         window.location.href = "SignUp.php";
+      });
+   </script>
+   <script src="Hscript.js" defer></script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
